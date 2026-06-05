@@ -1,5 +1,5 @@
 {
-  "version": "1.2.6",
-  "apk_url": "https://github.com/badhonmondol/shikhito_app_verson/releases/download/v1.2.6/app-release.apk",
-  "message": "permission fix"
+  "version": "1.2.7",
+  "apk_url": "https://github.com/badhonmondol/shikhito_app_verson/releases/download/v1.2.7/app-release.apk",
+  "message": "keystore path fix"
 }
