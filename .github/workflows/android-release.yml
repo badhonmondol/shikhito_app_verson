@@ -16,8 +16,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout shikhito_app
         uses: actions/checkout@v4
+        with:
+          repository: badhonmondol/shikhito_app
+          token: ${{ secrets.SOURCE_REPO_TOKEN }}
+          ref: ${{ github.ref_name }}
 
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
@@ -33,6 +37,8 @@ jobs:
       - name: Create release with APK
         uses: softprops/action-gh-release@v2
         with:
+          repository: badhonmondol/shikhito_app_verson
+          token: ${{ secrets.SOURCE_REPO_TOKEN }}
           tag_name: ${{ github.ref_name }}
           name: ${{ github.ref_name }}
           files: build/app/outputs/flutter-apk/app-release.apk
