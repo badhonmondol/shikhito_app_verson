@@ -16,12 +16,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout shikhito_app source
+      - name: Checkout
         uses: actions/checkout@v4
-        with:
-          repository: badhonmondol/shikhito_app
-          token: ${{ secrets.UPDATE_REPO_TOKEN }}
-          ref: ${{ github.ref_name }}
 
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
